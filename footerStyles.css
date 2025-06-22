@@ -1,0 +1,59 @@
+footer {
+    background-color: #333; /* Dark color similar to header */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding around content */
+    text-align: center; /* Center the text */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    position: fixed; /* Keep footer at the bottom */
+    bottom: 0; /* Align to bottom of the viewport */
+    width: 100%;
+    height: 80px; /* Footer height */
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Space between elements */
+}
+
+footer .content {
+    max-width: 1200px; /* Similar max-width to header */
+    margin: 0 auto; /* Center align the footer content */
+    display: flex; /* Flex container */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Take full width */
+}
+
+footer .logo img {
+    height: 100%; /* Set logo height to match footer height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+footer .text {
+    font-size: 14px; /* Text size for footer content */
+    line-height: 1.6; /* Line height for readability */
+    margin-left: 20px; /* Margin to the left of the text */
+}
+
+footer .nav {
+    margin-left: auto; /* Push nav to the right */
+}
+
+footer .nav ul {
+    display: flex; /* Flex container for nav items */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+footer .nav li {
+    margin-left: 20px; /* Space between nav items */
+}
+
+footer .nav a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px; /* Padding around links */
+}
+
+footer .nav a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}

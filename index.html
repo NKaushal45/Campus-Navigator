@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Navigator</title>
+    <link rel="stylesheet" href="assets/css/Styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="assets/media/logo transparent jpg.png" alt="Campus Navigator Logo" class="logo">
+        </a>
+        <h1 class="title">Campus Navigator</h1>
+        <nav>
+            <a href="pages/login.html" class="login-link">Login</a>
+        </nav>
+    </header>
+    <main>
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="assets/media/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <section id="home">
+                <div class="glass-container2">
+                    <h1>Search Destination</h1>
+                    <form action="#" class="search-bar" onsubmit="handleSearch(event)">
+                        <input type="search" name="search" id="search-input" pattern=".*\S.*" required>
+                        <button class="search-btn" type="submit">
+                          <span>Search</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="glass-container1" onclick="openCampusMap()">
+                    <h1 class="glass-container1text">View Campus Map</h1>
+
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+    <script>
+        // JavaScript to handle the search functionality
+        function handleSearch(event) {
+            event.preventDefault();
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
+            
+            // Map of search queries to URLs
+            const searchMap = {
+                "library": "library.html",
+                "gym": "gym.html",
+                "administration": "administration.html",
+                "cellar": "pages/BLOCK5/5_cellar/index.html"
+                // Add more search terms and corresponding URLs here
+            };
+
+            // Check if the query matches any predefined terms
+            if (searchMap[query]) {
+                window.location.href = searchMap[query];
+            } else if (query.startsWith("block")) {
+                // Handle block searches
+                window.location.href = "pages/campus map.html";
+            } else {
+                alert('No results found for "' + query + '".');
+            }
+        }
+    </script>
+</body>
+</html>

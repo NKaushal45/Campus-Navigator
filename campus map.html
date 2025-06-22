@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Map</title>
+    <link rel="stylesheet" href="../assets/css/campusStyles.css"> 
+    <link rel="stylesheet" href="../assets/css/footerStyles.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo-container">
+            <img src="../assets/media/logo transparent jpg.png" alt="Campus Navigator Logo" class="logo">
+        </a>
+        <h1 class="title">Campus Navigator</h1>
+    </header>
+    <main>
+        <div class="left-container">
+            <div class="button-container">
+                <div class="dropdown" id="dropdown1">
+                    <button class="block-button">Block-1</button>
+                    <div class="dropdown-content">
+                        <a href="../pages/BLOCK 1/1_Gfloor/index.html">Ground Floor</a>
+                        <a href="../pages/BLOCK 1/1_1floor/index.html">1st floor</a>
+                        <a href="../pages/BLOCK 1/1_2floor/index.html">2nd floor</a>
+                        <a href="../pages/BLOCK 1/1_3floor/index.html">3rd floor</a>
+                    </div>
+                </div>
+                <div class="dropdown" id="dropdown2">
+                    <button class="block-button">Block-2</button>
+                    <div class="dropdown-content">
+                        <a href="../pages/BLOCK2/2_Gfloor/index.html">Ground Floor</a>
+                        <a href="../pages/BLOCK2/2_1floor/index.html">1st floor</a>
+                        <a href="../pages/BLOCK2/2_2floor/index.html">2nd floor</a>
+                        <a href="../pages/BLOCK2/2_3floor/index.html">3rd floor</a>
+                    </div>
+                </div>
+                <div class="dropdown" id="dropdown3">
+                    <button class="block-button">Block-3</button>
+                    <div class="dropdown-content">
+                        <a href="../pages/BLOCK3/3_Gfloor/index.html">Ground floor</a>
+                        <a href="../pages/BLOCK3/3_1floor/index.html">1st floor</a>
+                        <a href="../pages/BLOCK3/3_2floor/index.html">2nd floor</a>
+                        <a href="../pages/BLOCK3/3_3floor/index.html">3rd floor</a>
+                    </div>
+                </div>
+                <div class="dropdown" id="dropdown4">
+                    <button class="block-button">Block-4</button>
+                    <div class="dropdown-content">
+                        <a href="../pages/BLOCK4/4_Gfloor/index.html">Ground floor</a>
+                        <a href="../pages/BLOCK4/4_1floor/index.html">1st floor</a>
+                        <a href="../pages/BLOCK4/4_2floor/index.html">2nd floor</a>
+                        <a href="../pages/BLOCK4/4_3floor/index.html">3rd floor</a>
+                    </div>
+                </div>
+                <div class="dropdown" id="dropdown5">
+                    <button class="block-button">Block-5</button>
+                    <div class="dropdown-content">
+                        <a href="../pages/BLOCK5/5_cellar/index.html">cellar</a>
+                        <a href="../pages/BLOCK5/5_Gfloor/index.html">Ground floor</a>
+                        <a href="../pages/BLOCK5/5_1floor/index.html">1st floor</a>
+                        <a href="../pages/BLOCK5/5_2floor/index.html">2nd floor</a>
+                        <a href="../pages/BLOCK5/5_3floor/index.html">3rd floor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center-container">
+            <img src="../assets/media/GCETmap.png" alt="Map" class="overview-image"> <!-- Adjust path if necessary -->
+        </div>
+        <div class="right-container">
+            <!-- Additional content can go here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="content">
+            <a href="index.html" class="logo">
+                <img src="../assets/media/logo transparent jpg.png" alt="Campus Navigator Logo">
+            </a>
+            <p class="text">© 2024 Campus Navigator.A Design Thinking Project</p>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../team.html">Team</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+       document.querySelectorAll('.block-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const currentDropdown = button.parentElement;
+
+        // Close all dropdowns
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            if (dropdown !== currentDropdown) {
+                dropdown.classList.remove('show');
+            }
+        });
+
+        // Toggle the clicked dropdown
+        currentDropdown.classList.toggle('show');
+    });
+});
+
+window.addEventListener('click', event => {
+    if (!event.target.matches('.block-button')) {
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
+    }
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* General styling for the login container */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the labels */
+.login-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: black; /* Change label color to black */
+}
+
+/* Styling for the input fields */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Arial', sans-serif;
+    color: black; /* Ensure text color is black */
+}
+
+/* Placeholder styling */
+.login-container input[type="email"]::placeholder,
+.login-container input[type="password"]::placeholder {
+    color: #333; /* Placeholder color */
+}
+
+/* Styling for the button */
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Add responsive styling */
+@media (max-width: 500px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    .login-container h2 {
+        font-size: 1.5em;
+    }
+}
